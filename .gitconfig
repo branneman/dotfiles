@@ -1,0 +1,22 @@
+[user]
+	email = branmovic@gmail.com
+	name = Bran van der Meer
+
+[push]
+	default = simple
+
+[core]
+	autocrlf = false
+
+[alias]
+	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit
+	s = status
+
+[merge]
+	ff = false
+
+[branch]
+	autosetuprebase = always
+
+[color]
+	ui = always
