@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+parse_git_branch() {
+    branch=`__git_ps1 "%s"`
+
+    if [[ $branch != "" ]]; then
+	if [[ $(git status 2> /dev/null | tail -n1) == "nothing to commit, working directory clean" ]]; then
+	    echo -e "\e[0;33m‹$branch›\e[0m"
+	else
+	    echo -e "\e[1;31m‹$branch›\e[0m"
+	fi
+    fi
+}
+
+parse_node_version() {
+    version=`node -v`
+    if [ -f ./package.json ]; then
+        echo -e "\e[1;32m‹$version›\e[0m"
+    fi
+}
+
+export PS1="┌─\e[0;36m\u\e[0m@\e[0;36mubuntu \e[1;36m\w\e[0m \$(parse_git_branch) \$(parse_node_version)\n└─$ "
