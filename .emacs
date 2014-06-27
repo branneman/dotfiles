@@ -7,3 +7,6 @@
 
 ;; no backup files                                                                                                                                                                                              
 (setq make-backup-files nil)
+
+;;; Compare windows                                                                                                                                                                                             
+(lobal-set-key "\C-cw" 'compare-windows)
