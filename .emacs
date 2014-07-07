@@ -1,12 +1,12 @@
-;; Intended for Emacs 24                                                                                                                                                                                        
+;; Intended for Emacs 24
 
-;; to setup tabs                                                                                                                                                                                                
+;; to setup tabs
 (setq c-basic-indent 2)
 (setq tab-width 4)
 (setq indent-tabs-mode nil)
 
-;; no backup files                                                                                                                                                                                              
+;; no backup files
 (setq make-backup-files nil)
 
-;;; Compare windows                                                                                                                                                                                             
-(lobal-set-key "\C-cw" 'compare-windows)
+;; Compare windows
+(global-set-key "\C-cw" 'compare-windows)
