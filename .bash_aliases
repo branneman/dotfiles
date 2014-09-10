@@ -1,4 +1,4 @@
-alias l="ls -slAchG"
+alias l="ls -slAchG --color=always"
 alias docker="sudo docker"
 
 alias .1="cd .."
