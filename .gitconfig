@@ -6,17 +6,24 @@
 	default = simple
 
 [core]
-	autocrlf = false
+	editor = emacs
+	autocrlf = input
+	excludesfile = /Users/bvandermeer/.gitignore_global
 
 [alias]
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit
 	s = status
-
-[merge]
-	ff = false
 
 [branch]
 	autosetuprebase = always
 
 [color]
 	ui = always
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
