@@ -13,6 +13,8 @@
 [alias]
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit
 	s = status
+	f = fetch -pt
+	co = checkout
 
 [branch]
 	autosetuprebase = always
