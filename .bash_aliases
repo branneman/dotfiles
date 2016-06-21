@@ -1,6 +1,4 @@
-alias l="ls -slAchG --color=always"
-alias docker="sudo docker"
-alias n="sudo n"
+alias l="ls -slAchG"
 
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
