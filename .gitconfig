@@ -20,7 +20,7 @@
 	s = status
 	f = fetch -pt
 	co = checkout
-	cob = checkoub -b
+	cob = checkout -b
 	d = diff
 
 [branch]
