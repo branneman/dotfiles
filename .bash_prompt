@@ -121,7 +121,7 @@ PS1+="\[${green}\]\w"; # working directory
 PS1+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
 PS1+="\$(prompt_node \"${white} node ${cyan}\")"; # Node.js version
 PS1+="\n";
-PS1+="\[${white}\]λ \[${reset}\]"; # `$` (and reset color)
+PS1+="\[${white}\]$(printf '\xf0\x9f\x90\x8f') $(printf '\xf0\x9f\x92\xa8')  \[${reset}\]"; # `$` (and reset color)
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
