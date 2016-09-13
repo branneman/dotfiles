@@ -20,6 +20,7 @@
 	shp = !git shw --patch
 	s = status
 	f = fetch -pt
+	p = pull --rebase
 	co = checkout
 	cob = checkout -b
 	d = diff
