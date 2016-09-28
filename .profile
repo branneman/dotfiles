@@ -16,8 +16,13 @@ if [ -f /usr/local/bin/aws_completer ]; then
     complete -C '/usr/local/bin/aws_completer' aws
 fi
 
+if [ -f .rsvm/rsvm.sh ]; then
+    source .rsvm/rsvm.sh
+    export PATH="$PATH:/Users/bvandermeer/.cargo/bin"
+fi
+
 export NVM_DIR="/Users/bvandermeer/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 nvm use 6.2.0
 
