@@ -2,6 +2,10 @@ export EDITOR=emacs
 export LANG="en_US.UTF-8"
 export LESSCHARSET="utf-8"
 
+if [ -f .env ]; then
+    source .env
+fi
+
 if [ -f .bash_aliases ]; then
     source .bash_aliases
 fi
