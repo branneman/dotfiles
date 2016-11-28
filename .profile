@@ -1,3 +1,5 @@
+PATH=$PATH:~/.bin/
+
 export EDITOR=emacs
 export LANG="en_US.UTF-8"
 export LESSCHARSET="utf-8"
