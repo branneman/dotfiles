@@ -34,3 +34,4 @@ export NVM_DIR="/Users/bvandermeer/.nvm"
 
 nvm use 6.9.1
 
+export HOMEBREW_NO_ANALYTICS=1
