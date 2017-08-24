@@ -24,10 +24,11 @@
 	co = checkout
 	cob = checkout -b
 	d = diff
-	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	purge = "!git branch --merged | grep -Ev '(\\*|master|develop|staging)' | xargs -n 1 git branch -d"
+	alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 
 [branch]
 	autosetuprebase = always
 
 [color]
-	ui = always
+	ui = auto
