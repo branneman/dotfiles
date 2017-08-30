@@ -25,6 +25,7 @@
 	cob = checkout -b
 	d = diff
 	purge = "!git branch --merged | grep -Ev '(\\*|master|develop|staging)' | xargs -n 1 git branch -d"
+	u = !git f && git p && git purge
 	alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 
 [branch]
