@@ -29,9 +29,17 @@ if [ -f .rsvm/rsvm.sh ]; then
     export PATH="$PATH:/Users/bvandermeer/.cargo/bin"
 fi
 
-export NVM_DIR="/Users/bvandermeer/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# Node.js version manager
+if [ -d .nvm ]; then
+    export NVM_DIR="/Users/bvandermeer/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    nvm use 7.7.4
+fi
 
-nvm use 6.9.1
+# Java version manager
+if [ -d .jenv ]; then
+    export PATH="$HOME/.jenv/bin:$PATH"
+    eval "$(jenv init -)"
+fi
 
 export HOMEBREW_NO_ANALYTICS=1
