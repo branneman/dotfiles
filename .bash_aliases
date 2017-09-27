@@ -1,6 +1,5 @@
 alias l="ls -slAchG"
 
-alias ws="open -a /Applications/WebStorm.app"
 alias rds="find . -name \"*.DS_Store\" -type f -delete"
 
 alias path='echo -e ${PATH//:/\\n}'
