@@ -26,6 +26,8 @@
 	d = diff
 	purge = "!git branch --merged | grep -Ev '(\\*|master|develop|staging)' | xargs -n 1 git branch -d"
 	u = !git f && git p && git purge
+	hide = update-index --assume-unchanged
+	unhide = update-index --no-assume-unchanged
 	alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 
 [branch]
