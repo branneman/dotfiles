@@ -1,5 +1,7 @@
 alias l="ls -slAchG"
 
+alias showhidden="defaults write com.apple.finder AppleShowAllFiles YES"
+alias hidehidden="defaults write com.apple.finder AppleShowAllFiles NO"
 alias rds="find . -name \"*.DS_Store\" -type f -delete"
 
 alias path='echo -e ${PATH//:/\\n}'
