@@ -33,7 +33,7 @@ fi
 if [ -d .nvm ]; then
     export NVM_DIR="/Users/bvandermeer/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-    nvm use 7.7.4
+    nvm use 7.10.1
 fi
 
 # Java version manager
