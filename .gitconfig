@@ -11,23 +11,28 @@
 	excludesfile = /Users/bvandermeer/.gitignore_global
 
 [alias]
+	co = checkout
+	cob = checkout -b
 	c = commit -m
+
+	s = status
+	b = branch -a
 	l = !git --no-pager log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit -15
 	ll = !git l --branches
 	lf = !git --no-pager log --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate --numstat
 	shw = show --pretty=format:'hash:    %C(green)%h%C(reset) %nparent:  %C(red)%p%C(reset)%nref:     %C(yellow)%D%C(reset)%nauthor:  %an <%ae>%ndate:    %ad%nmessage: %s%n'
 	sh = !git shw --no-patch
 	shp = !git shw --patch
-	s = status
+	d = diff
+
 	f = fetch -pt
 	p = pull --rebase
-	co = checkout
-	cob = checkout -b
-	d = diff
 	purge = "!git branch --merged | grep -Ev '(\\*|master|develop|staging)' | xargs -n 1 git branch -d"
 	u = !git f && git p && git purge
+
 	hide = update-index --assume-unchanged
 	unhide = update-index --no-assume-unchanged
+
 	alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 
 [branch]
