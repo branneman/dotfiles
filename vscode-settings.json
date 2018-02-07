@@ -1,0 +1,15 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true,
+    "editor.fontSize": 16,
+    "editor.tabSize": 2,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Monokai Dimmed",
+    "extensions.ignoreRecommendations": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "problems.autoReveal": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "prettier.semi": false,
+    "prettier.singleQuote": true
+}
