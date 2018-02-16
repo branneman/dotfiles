@@ -4,12 +4,18 @@
     "editor.fontSize": 16,
     "editor.tabSize": 2,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Monokai Dimmed",
+    "explorer.openEditors.visible": 0,
+    "workbench.colorTheme": "Earthsong (rainglow)",
     "extensions.ignoreRecommendations": true,
     "terminal.external.osxExec": "iTerm.app",
     "problems.autoReveal": false,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "prettier.semi": false,
-    "prettier.singleQuote": true
+    "prettier.singleQuote": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "njk": "html"
+    },
+    "window.zoomLevel": 0
 }
