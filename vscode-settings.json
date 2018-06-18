@@ -1,5 +1,6 @@
 {
     "files.autoSave": "onFocusChange",
+    "editor.tabCompletion": true,
     "editor.formatOnSave": true,
     "editor.fontSize": 16,
     "editor.tabSize": 2,
@@ -17,5 +18,6 @@
     "emmet.includeLanguages": {
         "njk": "html"
     },
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "git.autofetch": true
 }
