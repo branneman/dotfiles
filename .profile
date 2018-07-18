@@ -1,4 +1,4 @@
-PATH=$PATH:~/.bin/
+export PATH=$PATH:~/.bin/
 
 export EDITOR=emacs
 export LANG="en_US.UTF-8"
@@ -34,7 +34,7 @@ fi
 if [ -d .nvm ]; then
     export NVM_DIR="/Users/bvandermeer/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-    nvm use 9.3.0
+    nvm use stable
 fi
 
 # Java version manager
