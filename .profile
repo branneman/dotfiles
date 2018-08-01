@@ -1,6 +1,6 @@
 export PATH=$PATH:~/.bin/
 
-export EDITOR=emacs
+export EDITOR=vim
 export LANG="en_US.UTF-8"
 export LESSCHARSET="utf-8"
 
