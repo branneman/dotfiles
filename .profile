@@ -24,15 +24,9 @@ if [ -f /usr/local/bin/aws_completer ]; then
     complete -C '/usr/local/bin/aws_completer' aws
 fi
 
-# Rust version manager
-if [ -f .rsvm/rsvm.sh ]; then
-    source .rsvm/rsvm.sh
-    export PATH="$PATH:/Users/bvandermeer/.cargo/bin"
-fi
-
 # Node.js version manager
 if [ -d .nvm ]; then
-    export NVM_DIR="/Users/bvandermeer/.nvm"
+    export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
     nvm use stable
 fi
