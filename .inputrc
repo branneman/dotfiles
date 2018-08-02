@@ -1,6 +1,5 @@
+$include /etc/inputrc
+
 # Case-insensitive autocompletion
 set completion-ignore-case On
 
-# OSX Alt key for word-to-word movement
-"\e[1;9D": backward-word
-"\e[1;9C": forward-word
