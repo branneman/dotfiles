@@ -1,7 +1,7 @@
 alias aliases="cat ~/.bash_aliases | sed -e 's/alias //' -e 's/=\"/ = /' -e 's/\"$//'"
 
 alias cls="clear && node -e \"process.stdout.write('\\u001b]1337;ClearScrollback\\u0007')\""
-alias l="ls -slAchG"
+alias l="ls -slAchG --color=auto"
 
 alias cd1="cd .."
 alias cd2="cd ../../"
