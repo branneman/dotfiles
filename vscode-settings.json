@@ -1,5 +1,6 @@
 {
     "files.autoSave": "onFocusChange",
+    "editor.codeLens": false,
     "editor.tabCompletion": true,
     "editor.formatOnSave": true,
     "editor.fontSize": 16,
