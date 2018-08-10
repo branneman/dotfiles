@@ -1,7 +1,7 @@
 alias aliases="cat ~/.bash_aliases | sed -e 's/alias //' -e 's/=\"/ = /' -e 's/\"$//'"
 
 if [[ `uname` == 'Linux' ]]; then
-  alias cls="clear && reset" 
+  alias cls="clear"
 elif [[ `uanem` == 'Darwin' ]]; then
   alias cls="clear && node -e \"process.stdout.write('\\u001b]1337;ClearScrollback\\u0007')\""
 fi
