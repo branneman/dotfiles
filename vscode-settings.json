@@ -1,24 +1,30 @@
 {
-    "files.autoSave": "onFocusChange",
-    "editor.codeLens": false,
-    "editor.tabCompletion": true,
-    "editor.formatOnSave": true,
-    "editor.fontSize": 16,
-    "editor.tabSize": 2,
-    "editor.minimap.enabled": false,
-    "explorer.openEditors.visible": 0,
-    "workbench.colorTheme": "Earthsong (rainglow)",
-    "extensions.ignoreRecommendations": true,
-    "terminal.external.osxExec": "iTerm.app",
-    "problems.autoReveal": false,
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
-    "prettier.semi": false,
-    "prettier.singleQuote": true,
-    "emmet.triggerExpansionOnTab": true,
-    "emmet.includeLanguages": {
-        "njk": "html"
-    },
-    "window.zoomLevel": 0,
-    "git.autofetch": true
+  "editor.codeLens": false,
+  "editor.tabCompletion": true,
+  "editor.formatOnSave": true,
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "explorer.openEditors.visible": 0,
+  "extensions.ignoreRecommendations": true,
+  "files.autoSave": "onFocusChange",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/build/*/**": true
+  },
+  "git.autofetch": true,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "problems.autoReveal": false,
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "terminal.external.osxExec": "iTerm.app",
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "njk": "html"
+  },
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Earthsong (rainglow)"
 }
