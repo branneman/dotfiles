@@ -26,5 +26,6 @@
     "njk": "html"
   },
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Earthsong (rainglow)"
+  "workbench.colorTheme": "Earthsong (rainglow)",
+  "workbench.startupEditor": "none"
 }
