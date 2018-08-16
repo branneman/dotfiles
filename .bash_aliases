@@ -1,8 +1,6 @@
-alias aliases="cat ~/.bash_aliases | sed -e 's/alias //' -e 's/=\"/ = /' -e 's/\"$//'"
-
 if [[ `uname` == 'Linux' ]]; then
   alias cls="clear"
-elif [[ `uanem` == 'Darwin' ]]; then
+elif [[ `uname` == 'Darwin' ]]; then
   alias cls="clear && node -e \"process.stdout.write('\\u001b]1337;ClearScrollback\\u0007')\""
 fi
 
@@ -14,24 +12,19 @@ alias cd3="cd ../../../"
 alias cd4="cd ../../../../"
 alias cd5="cd ../../../../../"
 
-alias showhidden="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
-alias hidehidden="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
-alias rds="find . -name \"*.DS_Store\" -type f -delete"
+alias chrome="nohup /usr/bin/google-chrome-stable --remote-debugging-port=9222 &> ~/.chrome.nohup.out & disown"
+
+if [[ `uname` == 'Darwin' ]]; then
+  alias showhidden="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
+  alias hidehidden="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
+  alias rds="find . -name \"*.DS_Store\" -type f -delete"
+fi
 
 alias path='echo -e ${PATH//:/\\n}'
 alias flushdns='sudo dscacheutil -flushcache ; sudo killall -HUP mDNSResponder'
 
 alias base64-enc="openssl enc -base64"
 alias base64-dec="openssl enc -base64 -d"
-
-alias gzip-enc=""
-alias gzip-dec=""
-
-alias deflate-enc="pigz"
-alias deflate-dec="pigz - d"
-
-alias zlib-enc="openssl enc -z -none -e"
-alias zlib-dec="openssl enc -z -none -d"
 
 alias rsa='echo -e "\nEncrypt, Decrypt, Sign and Verify using the OpenSSL RSA util.\n\nYou can use stdin and stdout, or the -in and -out arguments to specify paths.\n\nExamples:\n rsa-enc -inkey key.pub.pem\n rsa-dec -inkey key.pem\n rsa-sign -inkey key.pem\n rsa-verify -inkey key.pem"'
 alias rsa-enc="openssl rsautl -encrypt -pubin"   # -inkey key.pub.pem
