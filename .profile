@@ -1,7 +1,6 @@
 export PATH=$PATH:~/.bin/
 
-export EDITOR=vim
-export LANG="en_US.UTF-8"
+export EDITOR=vi
 export LESSCHARSET="utf-8"
 
 if [ -f .env ]; then
@@ -28,6 +27,7 @@ fi
 if [ -d .nvm ]; then
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
     nvm use lts/*
 fi
 
