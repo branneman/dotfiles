@@ -22,7 +22,14 @@ if [[ `uname` == 'Darwin' ]]; then
 fi
 
 alias path='echo -e ${PATH//:/\\n}'
-alias flushdns='sudo dscacheutil -flushcache ; sudo killall -HUP mDNSResponder'
+
+if [[ `uname` == 'Darwin' ]]; then
+  alias flushdns='sudo dscacheutil -flushcache ; sudo killall -HUP mDNSResponder'
+fi
+
+alias vmlist='VBoxManage list vms'
+alias vmstart='VBoxManage startvm --type headless'
+vmstop() { VBoxManage controlvm $1 poweroff; }
 
 alias base64-enc="openssl enc -base64"
 alias base64-dec="openssl enc -base64 -d"
