@@ -5,10 +5,13 @@
 [push]
 	default = simple
 
+[gc]
+	auto = 1
+
 [core]
-	editor = vim
+	editor = vi
 	autocrlf = input
-	excludesfile = /Users/bvandermeer/.gitignore_global
+	excludesfile = ~/.gitignore
 
 [alias]
 	co = checkout
