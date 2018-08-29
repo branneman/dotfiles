@@ -19,7 +19,7 @@ read cloud_user
 echo "Enter password:"
 read -s cloud_pass
 
-cloud_fstab="\"$cloud_url\"	/media/cloud	davfs	defaults	0	0"
+cloud_fstab="\"$cloud_url\"	/media/cloud	davfs	defaults,uid=pi,gid=pi,_netdev,auto	0	0"
 echo $cloud_fstab >> /etc/fstab
 
 touch /etc/davfs2/secrets
