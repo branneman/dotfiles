@@ -12,7 +12,7 @@ alias cd3="cd ../../../"
 alias cd4="cd ../../../../"
 alias cd5="cd ../../../../../"
 
-alias updates="sudo apt-get update && sudo apt-get dist-upgrade && if [ -x \"$(command -v snap)\" ]; then sudo snap refresh; fi;"
+alias updates="sudo apt-get update && sudo apt-get dist-upgrade && sudo apt autoremove && if [ -x \"$(command -v snap)\" ]; then sudo snap refresh; fi;"
 alias chrome="nohup /usr/bin/google-chrome-stable --remote-debugging-port=9222 &> ~/.chrome.nohup.out & disown"
 
 if [[ `uname` == 'Darwin' ]]; then
