@@ -4,7 +4,7 @@ elif [[ `uname` == 'Darwin' ]]; then
   alias cls="clear && node -e \"process.stdout.write('\\u001b]1337;ClearScrollback\\u0007')\""
 fi
 
-alias l="ls -slAchG --color=auto"
+alias l="ls -cl -hp --time-style=long-iso --group-directories-first --color=auto"
 
 alias cd1="cd .."
 alias cd2="cd ../../"
