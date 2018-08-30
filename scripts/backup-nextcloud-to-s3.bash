@@ -24,7 +24,7 @@ echo "Backing up database..."
 sudo mysqldump --single-transaction -h $db_host -u $db_user -p$db_pass $db_name > "${backup_dir}/db.sql"
 
 echo "Backing up files..."
-rsync -avx $source_dir "${backup_dir}/files"
+rsync -avx "${source_dir}/" "${backup_dir}/files"
 
 echo "Sync to S3..."
 # TODO: Delete local folders that are older than a week
