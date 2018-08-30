@@ -6,7 +6,7 @@ if ! [ $(id -u) = 0 ]; then
 fi
 
 apt-get install davfs2 -y
-mkdir -p /mount/cloud
+mkdir -p /media/cloud
 usermod -a -G davfs2 root
 chmod u+s /usr/sbin/mount.davfs
 
