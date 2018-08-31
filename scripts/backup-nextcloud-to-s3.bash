@@ -27,7 +27,7 @@ echo "Backing up files..."
 rsync -avx "${source_dir}/" "${backup_dir}/files"
 
 echo "Sync to S3..."
-# TODO: Delete local folders that are older than a week
+ls $backups | sort | head -n -10 | xargs -n1 -I %s rm -rf %s
 aws s3 sync --delete $backups "s3://${backup_s3}"
 
 sudo -u www-data "${source_dir}/occ" maintenance:mode --off
