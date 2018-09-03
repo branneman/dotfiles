@@ -60,7 +60,7 @@ prompt_git() {
 }
 
 prompt_node() {
-    if [ -x \"$(command -v node)\" ]; then
+    if [ -x "$(command -v node)" ]; then
         node_version=`node -v`
         if [ -f ./package.json ]; then
             nvm_string=""
