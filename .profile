@@ -15,8 +15,8 @@ if [ -f .bash_prompt ]; then
     source .bash_prompt
 fi
 
-if [ -f git-completion.bash ]; then
-    source git-completion.bash
+if [ -f .gitcompletion.bash ]; then
+    source .gitcompletion.bash
 fi
 
 if [ -f /usr/local/bin/aws_completer ]; then
@@ -37,4 +37,6 @@ if [ -d .jenv ]; then
     eval "$(jenv init -)"
 fi
 
-export HOMEBREW_NO_ANALYTICS=1
+if [[ `uname` == 'Darwin' ]]; then
+    export HOMEBREW_NO_ANALYTICS=1
+fi
