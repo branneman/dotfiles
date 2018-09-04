@@ -5,6 +5,7 @@ elif [[ `uname` == 'Darwin' ]]; then
 fi
 
 alias l="ls -cl -hp --time-style=long-iso --group-directories-first --color=auto"
+alias ll="l -a"
 
 alias cd1="cd .."
 alias cd2="cd ../../"
