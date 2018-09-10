@@ -28,5 +28,6 @@
   "terminal.external.osxExec": "iTerm.app",
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Earthsong (rainglow)",
+  "workbench.editor.labelFormat": "short",
   "workbench.startupEditor": "none"
 }
