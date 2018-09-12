@@ -1,7 +1,7 @@
 {
   "editor.codeLens": false,
-  "editor.formatOnSave": true,
   "editor.fontSize": 16,
+  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.tabCompletion": true,
   "editor.tabSize": 2,
@@ -25,7 +25,7 @@
   "problems.autoReveal": false,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.rendererType": "dom",
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Earthsong (rainglow)",
   "workbench.editor.labelFormat": "short",
