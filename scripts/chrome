@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set +e
+
+# Find existing Chrome window
+wid=$(xdotool search --onlyvisible --name "Chrome")
+
+# Activate and open new tab with given URL
+xdotool windowactivate --sync $wid 2>/dev/null
+xdotool key --clearmodifiers --window $wid ctrl+t
+xdotool type --clearmodifiers --window $wid "$1"
+xdotool key --clearmodifiers --window $wid Return
+
+set -e
