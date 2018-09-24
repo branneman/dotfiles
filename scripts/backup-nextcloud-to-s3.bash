@@ -23,7 +23,7 @@ db_user=$(php -r "include \"${source_dir}/config/config.php\";echo(\$CONFIG[\"db
 db_pass=$(php -r "include \"${source_dir}/config/config.php\";echo(\$CONFIG[\"dbpassword\"]);")
 
 echo "Deleting expired backups..."
-ls $backups | sort | head -n -3 | xargs -n1 -I %s rm -rf %s
+ls $backups | sort | head -n -3 | xargs -n1 -I %s rm -rf "${backups}/%s"
 
 echo "Backup starting..."
 mkdir -p $backup_dir
