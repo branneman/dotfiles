@@ -17,6 +17,8 @@ start() { nohup $1 &> /dev/null & disown; }
 updates() { sudo bash -c 'for i in update {,dist-}upgrade auto{remove,clean}; do apt-get $i -y; done; if [ -x "$(command -v snap)" ]; then snap refresh; fi'; }
 alias chrome="nohup /usr/bin/google-chrome-stable --remote-debugging-port=9222 &> ~/.chrome.nohup.out & disown"
 
+alias vpn="sudo openvpn --config ${HOME}/.ovpn/${OPENVPN_SERVER} --auth-user-pass ${HOME}/.ovpn/auth.txt"
+
 if [[ `uname` == 'Darwin' ]]; then
   alias showhidden="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
   alias hidehidden="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
