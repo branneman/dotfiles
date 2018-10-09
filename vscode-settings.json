@@ -26,8 +26,8 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "terminal.integrated.rendererType": "dom",
+  "window.titleBarStyle": "custom",
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Earthsong (rainglow)",
   "workbench.editor.labelFormat": "short",
   "workbench.startupEditor": "none"
 }
