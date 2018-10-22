@@ -20,7 +20,7 @@
 
 	s = status
 	b = branch -a
-	l = !git --no-pager log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit -15
+	l = !git --no-pager log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue) <%an>%Creset' --abbrev-commit -15
 	ll = !git l --branches
 	lf = !git --no-pager log --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate --numstat
 	shw = show --pretty=format:'hash:    %C(green)%h%C(reset) %nparent:  %C(red)%p%C(reset)%nref:     %C(yellow)%D%C(reset)%nauthor:  %an <%ae>%ndate:    %ad%nmessage: %s%n'
