@@ -29,5 +29,6 @@
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 0,
   "workbench.editor.labelFormat": "short",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "breadcrumbs.enabled": false
 }
