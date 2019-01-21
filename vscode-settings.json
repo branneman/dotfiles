@@ -1,4 +1,6 @@
 {
+  "breadcrumbs.enabled": false,
+  "diffEditor.renderSideBySide": true,
   "editor.codeLens": false,
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
@@ -20,6 +22,7 @@
   },
   "git.autofetch": true,
   "javascript.updateImportsOnFileMove.enabled": "never",
+  "keyboard.dispatch": "keyCode",
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "problems.autoReveal": false,
@@ -29,6 +32,5 @@
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 0,
   "workbench.editor.labelFormat": "short",
-  "workbench.startupEditor": "none",
-  "breadcrumbs.enabled": false
+  "workbench.startupEditor": "none"
 }
