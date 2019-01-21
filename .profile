@@ -1,4 +1,5 @@
 export PATH=$PATH:~/.bin/
+export PATH=$PATH:/usr/local/go/bin
 
 export EDITOR=vi
 export LESSCHARSET="utf-8"
