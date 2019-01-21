@@ -19,11 +19,8 @@ if [ -d .nvm ]; then
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-    nvm use lts/*
+    nvm use 8.11.1
 fi
 
 # Java version manager
-if [ -d .jenv ]; then
-    export PATH="$HOME/.jenv/bin:$PATH"
-    eval "$(jenv init -)"
-fi
+[ -s "/home/bran/.jabba/jabba.sh" ] && source "/home/bran/.jabba/jabba.sh"
