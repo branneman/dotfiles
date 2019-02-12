@@ -1,7 +1,9 @@
 {
   "breadcrumbs.enabled": false,
   "diffEditor.renderSideBySide": true,
+  "debug.toolBarLocation": "docked",
   "editor.codeLens": false,
+  "editor.fontFamily": "Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
