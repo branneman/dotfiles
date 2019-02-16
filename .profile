@@ -1,5 +1,6 @@
-export PATH=$PATH:~/.bin/
-export PATH=$PATH:/usr/local/go/bin
+export PATH="$PATH:~/.bin/"
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="~/.cargo/bin:$PATH"
 
 export EDITOR=vi
 export LESSCHARSET="utf-8"
