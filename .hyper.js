@@ -21,6 +21,12 @@ module.exports = {
     // font weight for bold characters: 'normal' or 'bold'
     fontWeightBold: 'bold',
 
+    // line height as a relative unit
+    lineHeight: 1,
+
+    // letter spacing as a relative unit
+    letterSpacing: 0,
+
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
 
@@ -142,5 +148,24 @@ module.exports = {
   keymaps: {
     // Example
     // 'window:devtools': 'cmd+alt+o',
-  }
+  },
+
+  css: `
+    @keyframes fadeOut {
+      80% {
+        opacity: 1;
+      }
+      99% {
+        dispaly: block;
+      }
+      100% {
+        display: none;
+        opacity: 0;
+      }
+    }
+    .notifications_view {
+      animation: fadeOut ease 5s;
+      animation-fill-mode: forwards;
+    }
+  `
 }
