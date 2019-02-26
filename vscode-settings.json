@@ -1,13 +1,13 @@
 {
-  "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": true,
   "diffEditor.renderSideBySide": true,
   "debug.toolBarLocation": "docked",
-  "editor.codeLens": false,
+  "editor.codeLens": true,
   "editor.fontFamily": "Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
-  "editor.tabCompletion": true,
+  "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "emmet.includeLanguages": {
     "njk": "html"
@@ -20,7 +20,9 @@
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
     "**/node_modules/*/**": true,
-    "**/build/*/**": true
+    "**/build/*/**": true,
+    "**/coverage/*/**": true,
+    "**/.vscode/*/**": true
   },
   "git.autofetch": true,
   "javascript.updateImportsOnFileMove.enabled": "never",
