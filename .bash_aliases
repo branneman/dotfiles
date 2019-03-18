@@ -35,6 +35,8 @@ if [[ `uname` == 'Darwin' ]]; then
   alias flushdns='sudo dscacheutil -flushcache ; sudo killall -HUP mDNSResponder'
 fi
 
+alias mkcert="$(go env GOPATH)/bin/mkcert"
+
 alias vmlist='VBoxManage list vms'
 alias vmstart='VBoxManage startvm --type headless'
 vmstop() { VBoxManage controlvm $1 poweroff; }
