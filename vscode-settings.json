@@ -25,6 +25,8 @@
     "**/.vscode/*/**": true
   },
   "git.autofetch": true,
+  "javascript.suggest.enabled": false,
+  "typescript.suggest.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "keyboard.dispatch": "keyCode",
   "prettier.semi": false,
@@ -36,5 +38,6 @@
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 0,
   "workbench.editor.labelFormat": "short",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.feedback.visible": false
 }
