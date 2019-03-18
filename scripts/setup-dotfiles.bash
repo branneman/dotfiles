@@ -33,5 +33,6 @@ symlink .gitconfig
 symlink .gitignore
 symlink .gitcompletion.bash
 symlink .curlrc
+symlink .hyper.js
 
 exec $BASH
