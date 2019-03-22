@@ -37,6 +37,6 @@ rsync -ax "${source_dir}/" "${backup_dir}/files"
 sudo -u www-data "${source_dir}/occ" maintenance:mode --off
 
 echo "Sync to S3..."
-aws s3 sync --delete --quiet $backups "s3://${backup_s3}"
+$aws s3 sync --delete --quiet $backups "s3://${backup_s3}"
 
 echo "Backup finished."
