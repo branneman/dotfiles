@@ -1,11 +1,17 @@
-export PATH="$PATH:~/.bin/"
-export PATH="$PATH:/usr/local/go/bin"
-export PATH="~/.cargo/bin:$PATH"
-
-export GOPATH="$HOME/go"
+export HISTSIZE=1000000
+export HISTFILESIZE=1000000000
 
 export EDITOR=vi
 export LESSCHARSET="utf-8"
+
+if [ -d "/home/linuxbrew" ]; then
+    export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
+    export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
+    export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar"
+    export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew"
+    export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
+    export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
+fi
 
 if [[ `uname` == 'Darwin' ]]; then
     export HOMEBREW_NO_ANALYTICS=1

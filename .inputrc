@@ -3,3 +3,8 @@ $include /etc/inputrc
 # Case-insensitive autocompletion
 set completion-ignore-case On
 
+# ctrl+r searches for a command starting with the text to the left of the cursor
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
