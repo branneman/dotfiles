@@ -17,6 +17,7 @@
 	co = checkout
 	cob = checkout -b
 	c = commit -m
+	ca = commit --amend
 
 	s = status
 	b = branch -a
