@@ -10,6 +10,10 @@ if [ -f .gitcompletion.bash ]; then
     source .gitcompletion.bash
 fi
 
+if [ -f .kubecompletion.bash ]; then
+    source .kubecompletion.bash
+fi
+
 if [ -f /usr/local/bin/aws_completer ]; then
     complete -C '/usr/local/bin/aws_completer' aws
 fi

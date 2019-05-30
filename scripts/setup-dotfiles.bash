@@ -32,6 +32,7 @@ symlink .inputrc
 symlink .gitconfig
 symlink .gitignore
 symlink .gitcompletion.bash
+symlink .kubecompletion.bash
 symlink .curlrc
 symlink .hyper.js
 
