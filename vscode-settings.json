@@ -39,5 +39,13 @@
   "window.zoomLevel": 0,
   "workbench.editor.labelFormat": "short",
   "workbench.startupEditor": "none",
-  "workbench.statusBar.feedback.visible": false
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[clojure]": {
+    "editor.formatOnSave": false,
+  }
 }
