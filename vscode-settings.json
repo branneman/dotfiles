@@ -7,6 +7,8 @@
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
+  "editor.renderControlCharacters": false,
+  "editor.renderWhitespace": "none",
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "emmet.includeLanguages": {
@@ -39,13 +41,16 @@
   "window.zoomLevel": 0,
   "workbench.editor.labelFormat": "short",
   "workbench.startupEditor": "none",
+  "[clojure]": {
+    "editor.formatOnSave": false
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[clojure]": {
-    "editor.formatOnSave": false
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
