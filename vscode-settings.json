@@ -1,4 +1,5 @@
 {
+  "bashBeautify.tabSize": 2,
   "breadcrumbs.enabled": true,
   "diffEditor.renderSideBySide": true,
   "debug.toolBarLocation": "docked",

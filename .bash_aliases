@@ -1,6 +1,6 @@
 if [[ `uname` == 'Linux' ]]; then
   alias cls="clear"
-elif [[ `uname` == 'Darwin' ]]; then
+  elif [[ `uname` == 'Darwin' ]]; then
   alias cls="clear && node -e \"process.stdout.write('\\u001b]1337;ClearScrollback\\u0007')\""
 fi
 
@@ -34,6 +34,10 @@ alias path='echo -e ${PATH//:/\\n}'
 if [[ `uname` == 'Darwin' ]]; then
   alias flushdns='sudo dscacheutil -flushcache ; sudo killall -HUP mDNSResponder'
 fi
+
+alias k='kubectl'
+alias kns='f(){ kubectl config set-context $(kubectl config current-context) --namespace="$@";  unset -f f; }; f'
+complete -F __start_kubectl k
 
 alias vmlist='VBoxManage list vms'
 alias vmstart='VBoxManage startvm --type headless'
