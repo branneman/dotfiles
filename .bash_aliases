@@ -45,7 +45,9 @@ if [[ `uname` == 'Darwin' ]]; then
 fi
 
 alias k='kubectl'
-alias kns='f(){ kubectl config set-context $(kubectl config current-context) --namespace="$@";  unset -f f; }; f'
+alias ks='echo -e "context:   $(k config current-context)\nnamespace: $(k config view --minify --output jsonpath={..namespace})"'
+alias kubecontext='k config use-context'
+alias kubens='f(){ k config set-context --current --namespace="$@";  unset -f f; }; f'
 complete -F __start_kubectl k
 
 alias vmlist='VBoxManage list vms'
