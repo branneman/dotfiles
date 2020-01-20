@@ -19,13 +19,13 @@ fi
 start() { nohup $1 &> /dev/null & disown; }
 
 alias updates='
-  echo && sudo true
-  echo -e "\n> apt update\n" && sudo apt update
-  echo -e "\n> apt full-upgrade -y\n" && sudo apt full-upgrade -y
-  echo -e "\n> apt-get clean -y\n" && sudo apt-get clean -y
-  echo -e "\n> apt-get autoclean -y\n" && sudo apt-get autoclean -y
-  echo -e "\n> apt-get autoremove -y --purge\n" && sudo apt-get autoremove -y --purge
-  if [ -x "$(command -v snap)" ]; then echo -e "\n> snap refresh\n" && sudo snap refresh; fi
+  echo && sudo true && \
+  echo -e "\n> apt update\n" && sudo apt update && \
+  echo -e "\n> apt full-upgrade -y\n" && sudo apt full-upgrade -y && \
+  echo -e "\n> apt-get clean -y\n" && sudo apt-get clean -y && \
+  echo -e "\n> apt-get autoclean -y\n" && sudo apt-get autoclean -y && \
+  echo -e "\n> apt-get autoremove -y --purge\n" && sudo apt-get autoremove -y --purge && \
+  if [ -x "$(command -v snap)" ]; then echo -e "\n> snap refresh\n" && sudo snap refresh; fi && \
   if [ -x "$(command -v brew)" ]; then echo -e "\n> brew upgrade\n" && brew upgrade; fi'
 
 alias chrome="nohup /usr/bin/google-chrome-stable --remote-debugging-port=9222 &> ~/.chrome.nohup.out & disown"
