@@ -9,7 +9,7 @@
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.renderControlCharacters": false,
-  "editor.renderWhitespace": "none",
+  "editor.renderWhitespace": "selection",
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "emmet.includeLanguages": {
