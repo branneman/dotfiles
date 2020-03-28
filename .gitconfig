@@ -1,6 +1,6 @@
 [user]
-	name = Bran van der Meer
-	email = bran.van.der.meer@protonmail.com
+	name = @@GIT_FULLNAME@@
+	email = @@GIT_EMAIL@@
 
 [push]
 	default = simple
