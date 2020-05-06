@@ -31,4 +31,7 @@ if [ -d .nvm ]; then
 fi
 
 # Java version manager
-[ -s "/home/bran/.jabba/jabba.sh" ] && source "/home/bran/.jabba/jabba.sh"
+if [ -d .jabba ]; then
+  source "/home/bran/.jabba/jabba.sh"
+  jabba use openjdk@1.14.0
+fi

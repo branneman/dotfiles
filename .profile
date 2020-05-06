@@ -6,6 +6,10 @@ export LESSCHARSET="utf-8"
 
 export KUBE_EDITOR=nano
 
+if [ -d "$HOME/.bin" ]; then
+  export PATH="$PATH:$HOME/.bin"
+fi
+
 if [ -d "/home/linuxbrew" ]; then
   export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
   export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
