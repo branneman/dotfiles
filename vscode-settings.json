@@ -18,6 +18,11 @@
   "emmet.triggerExpansionOnTab": true,
   "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "helmfile.yml": "helm",
+    "helmfile.yaml": "helm",
+    "*.gotmpl": "helm"
+  },
   "files.autoSave": "onFocusChange",
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -53,5 +58,8 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vs-kubernetes": {
+    "vs-kubernetes.minikube-path.linux": "/home/bran/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
   }
 }
