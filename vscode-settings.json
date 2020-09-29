@@ -37,6 +37,7 @@
   "typescript.suggest.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "keyboard.dispatch": "keyCode",
+  "prettier.jsxSingleQuote": true,
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "problems.autoReveal": false,
@@ -47,6 +48,7 @@
   "window.zoomLevel": 0,
   "workbench.editor.labelFormat": "short",
   "workbench.startupEditor": "none",
+  "yaml.format.singleQuote": true,
   "[clojure]": {
     "editor.formatOnSave": false
   },
