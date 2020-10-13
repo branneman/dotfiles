@@ -31,7 +31,7 @@
 	df = "!f() { git diff --name-status -r "HEAD~$1"; }; f"
 
 	squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\" --no-verify; };f"
-	f = fetch -pt
+	f = fetch -ptf
 	p = pull --rebase
 	purge = "!git branch --merged | grep -Ev '(\\*|master|develop|staging)' | xargs -r -n 1 git branch -d"
 	u = !git f && git p && git purge
