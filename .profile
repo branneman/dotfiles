@@ -19,6 +19,10 @@ if [ -d "/home/linuxbrew" ]; then
   export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 fi
 
+if [ -d "$HOME/.cargo" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 if [[ `uname` == 'Darwin' ]]; then
   export HOMEBREW_NO_ANALYTICS=1
 fi
