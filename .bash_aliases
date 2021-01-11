@@ -44,6 +44,9 @@ if [[ `uname` == 'Darwin' ]]; then
   alias flushdns='sudo dscacheutil -flushcache ; sudo killall -HUP mDNSResponder'
 fi
 
+alias blueprint='export AWS_CONFIG_FILE=~/.aws/config AWS_SHARED_CREDENTIALS_FILE=~/.aws/credentials'
+alias legacy='export AWS_CONFIG_FILE=~/.aws_legacy/config AWS_SHARED_CREDENTIALS_FILE=~/.aws_legacy/credentials'
+
 alias k='kubectl'
 alias ks='echo -e "context: $(k config current-context)\nnamespace: $(k config view --minify --output jsonpath={..namespace})"'
 alias kc='f (){ export KUBECONFIG=~/.kube/"$@".yaml; unset -f f; }; f'
