@@ -4,7 +4,7 @@ export HISTFILESIZE=1000000000
 export EDITOR=vi
 export LESSCHARSET="utf-8"
 
-export KUBE_EDITOR=nano
+export GTK_IM_MODULE=xim
 
 if [ -d "$HOME/.bin" ]; then
   export PATH="$PATH:$HOME/.bin"

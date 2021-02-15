@@ -36,6 +36,7 @@ symlink .kubecompletion.bash
 symlink .curlrc
 symlink .hyper.js
 symlink .tmux.conf
+symlink .XCompose
 
 echo "Enter Git fullname:"
 read GIT_FULLNAME
