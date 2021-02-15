@@ -35,6 +35,7 @@ symlink .gitcompletion.bash
 symlink .kubecompletion.bash
 symlink .curlrc
 symlink .hyper.js
+symlink .tmux.conf
 
 echo "Enter Git fullname:"
 read GIT_FULLNAME
