@@ -40,3 +40,6 @@
 ; racket-mode
 (require 'racket-xp)
 (add-hook 'racket-mode-hook #'racket-xp-mode)
+
+; hideshow minor mode
+(global-set-key (read-kbd-macro "S-<iso-lefttab>") 'hs-toggle-hiding) ; C-h k <shortcut combo>
