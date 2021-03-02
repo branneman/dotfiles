@@ -34,7 +34,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (racket-mode markdown-mode folding graphviz-dot-mode dracula-theme))))
+    (multiple-cursors racket-mode markdown-mode folding graphviz-dot-mode dracula-theme))))
 (custom-set-faces)
 
 ; racket-mode
@@ -43,3 +43,7 @@
 
 ; hideshow minor mode
 (global-set-key (read-kbd-macro "S-<iso-lefttab>") 'hs-toggle-hiding) ; C-h k <shortcut combo>
+
+; multiple-cursors (Ctrl+D like VSCode/Sublime)
+(define-key global-map (kbd "C-d") 'mc/mark-next-like-this)
+(define-key global-map (kbd "C-u") 'mc/mark-previous-like-this)
