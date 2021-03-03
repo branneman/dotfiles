@@ -1,7 +1,7 @@
 export HISTSIZE=1000000
 export HISTFILESIZE=1000000000
 
-export EDITOR=vi
+export EDITOR="emacs -nw"
 export LESSCHARSET="utf-8"
 
 export GTK_IM_MODULE=xim
