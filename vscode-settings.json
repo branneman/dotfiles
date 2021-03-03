@@ -1,6 +1,7 @@
 {
   "bashBeautify.tabSize": 2,
   "breadcrumbs.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": true,
   "debug.toolBarLocation": "docked",
   "editor.codeLens": true,
@@ -34,6 +35,8 @@
   },
   "git.autofetch": true,
   "javascript.suggest.enabled": false,
+  "jest.enableSnapshotUpdateMessages": false,
+  "jest.enableCodeLens": false,
   "typescript.suggest.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "keyboard.dispatch": "keyCode",
