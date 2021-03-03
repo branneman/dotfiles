@@ -9,7 +9,6 @@
 	auto = 1
 
 [core]
-	editor = vi
 	autocrlf = input
 	excludesfile = ~/.gitignore
 
