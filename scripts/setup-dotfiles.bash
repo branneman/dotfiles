@@ -29,6 +29,7 @@ symlink .bash_aliases
 symlink .bash_prompt
 symlink .inputrc
 
+symlink .emacs
 symlink .gitconfig
 symlink .gitignore
 symlink .gitcompletion.bash
@@ -40,10 +41,14 @@ symlink .XCompose
 
 echo "Enter Git fullname:"
 read GIT_FULLNAME
-sed -i "s/@@GIT_FULLNAME@@/$GIT_FULLNAME/" .gitconfig
+echo "Requesting root permissions to set git config at system level..."
+sudo git config --system user.name $FULLNAME
+echo "Success."
 
 echo "Enter Git email address:"
 read GIT_EMAIL
-sed -i "s/@@GIT_EMAIL@@/$GIT_EMAIL/" .gitconfig
+echo "Requesting root permissions to set git config at system level..."
+sudo git config --system user.email $GIT_EMAIL
+echo "Success."
 
 exec $BASH

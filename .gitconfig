@@ -1,7 +1,3 @@
-[user]
-	name = @@GIT_FULLNAME@@
-	email = @@GIT_EMAIL@@
-
 [push]
 	default = simple
 
