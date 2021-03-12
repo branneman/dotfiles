@@ -22,7 +22,7 @@
 	shw = show --pretty=format:'hash:    %C(green)%h%C(reset) %nparent:  %C(red)%p%C(reset)%nref:     %C(yellow)%D%C(reset)%nauthor:  %an <%ae>%ndate:    %ad%nmessage: %s%n'
 	sh = !git shw --no-patch
 	shp = !git shw --patch
-	d = diff
+	d = icdiff
 	df = "!f() { git diff --name-status -r "HEAD~$1"; }; f"
 
 	squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\" --no-verify; };f"
@@ -41,3 +41,6 @@
 
 [color]
 	ui = auto
+
+[icdiff]
+	options = --highlight --line-numbers
