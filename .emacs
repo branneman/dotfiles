@@ -24,18 +24,13 @@
 ;  (setq auto-package-update-hide-results t)
 ;  (auto-package-update-maybe))
 
-; install packages
-(use-package dracula-theme :ensure t)
-(use-package folding :ensure t)
+; install language modes
 (use-package markdown-mode :ensure t)
-(use-package racket-mode :ensure t)
 (use-package graphviz-dot-mode :ensure t)
-(use-package multiple-cursors :ensure t)
-(use-package project-persist :ensure t)
-(use-package project-persist-drawer :ensure t)
-(use-package ppd-sr-speedbar :ensure t)
+(use-package racket-mode :ensure t)
 
 ; theme
+(use-package dracula-theme :ensure t)
 (setq custom-enabled-themes 'dracula)
 
 ; start with empty *scratch* buffer
@@ -55,7 +50,19 @@
 ; highlight matching parentheses
 (show-paren-mode 1)
 
-; racket-mode
+; racket via lsp
+; $ raco pkg install racket-langserver
+(use-package lsp-mode
+  :ensure t
+  :init (setq lsp-keymap-prefix "C-l")
+  :hook ((racket-mode . lsp))
+  :commands lsp)
+(use-package lsp-ui :commands lsp-ui-mode :ensure t)
+;(require 'lsp-mode)
+(require 'lsp-racket)
+(add-hook 'racket-mode-hook #'lsp-racket-enable)
+
+; racket-xp
 (require 'racket-xp)
 (add-hook 'racket-mode-hook #'racket-xp-mode)
 
@@ -66,13 +73,18 @@
 (add-hook 'focus-out-hook 'save-all)
 
 ; code folding toggling (hideshow minor mode)
+(use-package folding :ensure t)
 (global-set-key (read-kbd-macro "S-<iso-lefttab>") 'hs-toggle-hiding) ; C-h k <shortcut combo>
 
 ; multiple-cursors (Ctrl+D like VSCode/Sublime)
+(use-package multiple-cursors :ensure t)
 (define-key global-map (kbd "C-d") 'mc/mark-next-like-this)
 (define-key global-map (kbd "C-u") 'mc/mark-previous-like-this)
 
 ; project-persist + project drawer
+(use-package project-persist :ensure t)
+(use-package project-persist-drawer :ensure t)
+(use-package ppd-sr-speedbar :ensure t)
 (require 'project-persist)
 (require 'project-persist-drawer)
 (require 'ppd-sr-speedbar)
