@@ -33,6 +33,9 @@
 (use-package dracula-theme :ensure t)
 (setq custom-enabled-themes 'dracula)
 
+; maximise window on start
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ; start with empty *scratch* buffer
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message "")
@@ -81,7 +84,7 @@
 (define-key global-map (kbd "C-d") 'mc/mark-next-like-this)
 (define-key global-map (kbd "C-u") 'mc/mark-previous-like-this)
 
-; project-persist + project drawer
+; project-persist + project drawer (toggle: M-x p-op RET)
 (use-package project-persist :ensure t)
 (use-package project-persist-drawer :ensure t)
 (use-package ppd-sr-speedbar :ensure t)
@@ -92,3 +95,5 @@
 (project-persist-drawer-mode t)
 (add-to-list 'project-persist-additional-settings
 	     '(my-setting . (lambda () (read-from-minibuffer "My setting: "))))
+(setq default-directory "~/Source/")
+;(project-persist-drawer-open)
