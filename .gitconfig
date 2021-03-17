@@ -8,6 +8,12 @@
 	autocrlf = input
 	excludesfile = ~/.gitignore
 
+[init]
+	defaultBranch = main
+
+[branch]
+	autosetuprebase = always
+
 [alias]
 	co = checkout
 	cob = checkout -b
@@ -35,9 +41,6 @@
 	unhide = update-index --no-assume-unchanged
 
 	alias = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
-
-[branch]
-	autosetuprebase = always
 
 [color]
 	ui = auto
