@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+runIfExists() {
+  if [ -x "$(command -v $1)" ]; then
+    printf "\n>> $2 \n\n"
+    $2
+  fi
+}
+
+# If sudo will prompt for password, do it once now
+sudo true
+
+# Distro: Arch-based
+runIfExists "pacman" "sudo pacman -Syu"
+
+# Distro: Debian-based
+runIfExists "apt" "sudo apt update"
+runIfExists "apt" "sudo apt full-upgrade -y"
+runIfExists "apt-get" "sudo apt-get clean -y"
+runIfExists "apt-get" "sudo apt-get autoclean -y"
+runIfExists "apt-get" "sudo apt-get autoremove -y --purge"
+
+runIfExists "snap" "sudo snap refresh"
+
+runIfExists "brew" "brew upgrade"
+
+runIfExists "npm" "npm update -g"
+
+runIfExists "raco" "raco pkg update --all"
+
+runIfExists "rustup" "rustup update"
