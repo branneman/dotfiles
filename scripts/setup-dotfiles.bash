@@ -35,6 +35,7 @@ symlink .gitignore
 symlink .gitcompletion.bash
 symlink .kubecompletion.bash
 symlink .curlrc
+symlink .nvmrc
 symlink .hyper.js
 symlink .tmux.conf
 symlink .XCompose
