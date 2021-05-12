@@ -30,8 +30,11 @@
 (use-package racket-mode :ensure t)
 
 ; theme
-(use-package dracula-theme :ensure t)
-(setq custom-enabled-themes 'dracula)
+;(use-package dracula-theme :ensure t)
+;(setq custom-enabled-themes 'dracula)
+
+; hide toolbar
+(tool-bar-mode 0)
 
 ; maximise window on start
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
