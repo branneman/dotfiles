@@ -9,6 +9,9 @@ export GTK_IM_MODULE=xim
 if [ -d "$HOME/.bin" ]; then
   export PATH="$PATH:$HOME/.bin"
 fi
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$PATH:$HOME/.local/bin"
+fi
 
 if [ -d "/home/linuxbrew" ]; then
   export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
@@ -19,12 +22,8 @@ if [ -d "/home/linuxbrew" ]; then
   export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 fi
 
-if [ -d "$HOME/.cargo" ]; then
-  export PATH="$HOME/.cargo/bin:$PATH"
-fi
-
-if [[ `uname` == 'Darwin' ]]; then
-  export HOMEBREW_NO_ANALYTICS=1
+if [ -f "$HOME/.cargo/env" ]; then
+  source "$HOME/.cargo/env"
 fi
 
 if [ -f .env ]; then
