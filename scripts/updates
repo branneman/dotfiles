@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
+set -e
+
+run() {
+  printf "\n>> $1 \n\n"
+  $1
+}
 runIfExists() {
   if [ -x "$(command -v $1)" ]; then
-    printf "\n>> $2 \n\n"
-    $2
+    run "$2"
   fi
 }
 
@@ -24,6 +29,16 @@ runIfExists "snap" "sudo snap refresh"
 
 runIfExists "brew" "brew upgrade"
 
+# nvm is a bash function, not a builtin, file or alias
+if [ -d .nvm ] && [ -s .nvm/nvm.sh ]; then
+  NVM_DIR="$HOME/.nvm"
+  source .nvm/nvm.sh
+  run "nvm install lts/* --reinstall-packages-from=current --latest-npm"
+  run "nvm alias default lts/*"
+  run "nvm use default"
+fi
+
+runIfExists "npm" "npm install -g npm"
 runIfExists "npm" "npm update -g"
 
 runIfExists "raco" "raco pkg update --all"
