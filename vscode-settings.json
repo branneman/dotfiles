@@ -48,7 +48,6 @@
   "telemetry.enableTelemetry": false,
   "terminal.integrated.rendererType": "dom",
   "window.titleBarStyle": "custom",
-  "window.zoomLevel": 0,
   "workbench.editor.labelFormat": "short",
   "workbench.startupEditor": "none",
   "yaml.format.singleQuote": true,
@@ -63,8 +62,5 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "vs-kubernetes": {
-    "vs-kubernetes.minikube-path.linux": "/home/bran/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
   }
 }
