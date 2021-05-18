@@ -33,7 +33,7 @@ runIfExists "brew" "brew upgrade"
 if [ -d .nvm ] && [ -s .nvm/nvm.sh ]; then
   NVM_DIR="$HOME/.nvm"
   source .nvm/nvm.sh
-  run "nvm install lts/* --reinstall-packages-from=current --latest-npm"
+  run "nvm install lts/*"
   run "nvm alias default lts/*"
   run "nvm use default"
 fi
