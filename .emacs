@@ -30,8 +30,7 @@
 (use-package racket-mode :ensure t)
 
 ; theme
-;(use-package dracula-theme :ensure t)
-;(setq custom-enabled-themes 'dracula)
+(load-theme 'dracula t)
 
 ; hide toolbar
 (tool-bar-mode 0)
