@@ -36,7 +36,7 @@
 (tool-bar-mode 0)
 
 ; maximise window on start
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ; start with empty *scratch* buffer
 (setq inhibit-startup-screen t)
@@ -52,8 +52,9 @@
 (setq scroll-step           1
       scroll-conservatively 10000)
 
-; highlight matching parentheses
-(show-paren-mode 1)
+; paredit
+(add-hook 'racket-mode-hook 'paredit-mode)
+(show-paren-mode 1) ; highlight matching parentheses
 
 ; racket via lsp
 ; $ raco pkg install racket-langserver
