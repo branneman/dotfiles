@@ -27,6 +27,7 @@ runIfExists "apt-get" "sudo apt-get autoremove -y --purge"
 
 runIfExists "snap" "sudo snap refresh"
 
+runIfExists "brew" "brew update"
 runIfExists "brew" "brew upgrade"
 
 # nvm is a bash function, not a builtin, file or alias
