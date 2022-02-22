@@ -39,19 +39,21 @@ find . -type f -execdir ln -sf "$(pwd)/{}" "$HOME/.local/bin/{}" \;
 
 # Install commonly used packages
 "$HOME/.local/bin/raco" pkg install --auto --skip-installed --installation \
-web-server
+  web-server
+
 "$HOME/.local/bin/raco" pkg install --auto --skip-installed --user \
-racket-langserver \
-threading \
-racketscript \
-rackjure \
-files-viewer \
-beautiful-racket \
-markdown \
-http-easy \
-sha \
-dotenv \
-tzinfo tzdata \
-graph
+  racket-langserver \
+  threading \
+  racketscript \
+  rackjure \
+  files-viewer \
+  beautiful-racket \
+  markdown \
+  http-easy \
+  sha \
+  dotenv \
+  tzinfo tzdata \
+  graph \
+  advent-of-code
 
 echo -e "\nDone."
