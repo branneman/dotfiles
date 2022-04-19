@@ -10,6 +10,8 @@ alias cd5="cd ../../../../../"
 alias open="xdg-open"
 start() { nohup $1 &> /dev/null & disown; }
 
+alias tree='tree -I ".git|node_modules"'
+
 alias path='echo -e ${PATH//:/\\n}'
 
 alias k='kubectl'
