@@ -21,7 +21,7 @@ fi
 
 # Download & untar
 cd "$HOME/Source"
-curl -L "https://download.racket-lang.org/installers/$VERSION/racket-$VERSION-src-builtpkgs.tgz" -o "racket-$VERSION.tar"
+curl -C - --max-time 0 -L "https://download.racket-lang.org/installers/$VERSION/racket-$VERSION-src-builtpkgs.tgz" -o "racket-$VERSION.tar"
 tar xvf "racket-$VERSION.tar"
 rm "racket-$VERSION.tar"
 
