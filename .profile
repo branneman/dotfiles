@@ -7,14 +7,14 @@ export LESSCHARSET="utf-8"
 export GTK_IM_MODULE=xim
 
 if [ -d "$HOME/.bin" ]; then
-  export PATH="$PATH:$HOME/.bin"
+  export PATH="$HOME/.bin:$PATH"
 fi
 if [ -d "$HOME/.local/bin" ]; then
-  export PATH="$PATH:$HOME/.local/bin"
+  export PATH="$HOME/.local/bin:$PATH"
 fi
 
 if [ -d "/home/linuxbrew" ]; then
-  export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
+  export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
   export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
   export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar"
   export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew"
