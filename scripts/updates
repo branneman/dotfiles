@@ -19,8 +19,10 @@ sudo true
 runIfExists "pacman" "sudo pacman -Syu"
 
 # Distro: Debian-based
-runIfExists "apt" "sudo apt update"
-runIfExists "apt" "sudo apt full-upgrade -y"
+if [[ $OSTYPE != 'darwin'* ]]; then # `apt` on macOS is some Java tool
+  runIfExists "apt" "sudo apt update"
+  runIfExists "apt" "sudo apt full-upgrade -y"
+fi
 runIfExists "apt-get" "sudo apt-get clean -y"
 runIfExists "apt-get" "sudo apt-get autoclean -y"
 runIfExists "apt-get" "sudo apt-get autoremove -y --purge"
