@@ -60,9 +60,9 @@ prompt_git() {
 prompt_node() {
   if [ -x "$(command -v node)" ]; then
     node_version=`node -v`
-    if [ -f ./package.json ]; then
+    if [ -f "./package.json" ]; then
       nvm_string=""
-      if [[ -f ./.nvmrc && "v`cat .nvmrc`" != $node_version ]]; then
+      if [[ -f "./.nvmrc" && ( "`cat .nvmrc`" != $node_version && "v`cat .nvmrc`" != $node_version ) ]]; then
         nvm_string="${red} != .nvmrc";
       fi
       echo -e "${1}${node_version}${nvm_string}";
