@@ -21,6 +21,9 @@ if [ -d "/home/linuxbrew" ]; then
   export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
   export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 fi
+if [ -d "/opt/homebrew" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 if [ -f "$HOME/.cargo/env" ]; then
   source "$HOME/.cargo/env"
