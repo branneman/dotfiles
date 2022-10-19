@@ -32,3 +32,7 @@ fi
 if [ -f .env ]; then
   source .env
 fi
+
+if [ -e "${HOME}/.iterm2_shell_integration.bash" ]; then
+  source "${HOME}/.iterm2_shell_integration.bash"
+fi
