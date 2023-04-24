@@ -6,7 +6,8 @@
   "debug.toolBarLocation": "docked",
   "editor.codeLens": true,
   "editor.fontFamily": "Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
-  "editor.fontSize": 16,
+  "editor.fontSize": 13.5,
+  "terminal.integrated.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.renderControlCharacters": false,
@@ -61,6 +62,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
