@@ -34,6 +34,11 @@ if [ -d .nvm ]; then
   fi
 fi
 
+# Python version manager
+if [ -d .pyenv ]; then
+  eval "$(pyenv init -)"
+fi
+
 # Java version manager
 if [ -d "$HOME/.jabba" ]; then
   source "$HOME/.jabba/jabba.sh"
