@@ -1,29 +1,29 @@
-if [ -f .bash_aliases ]; then
-  source .bash_aliases
+if [ -f "$HOME/.bash_aliases" ]; then
+  source "$HOME/.bash_aliases"
 fi
 
-if [ -f .bash_prompt ]; then
-  source .bash_prompt
+if [ -f "$HOME/.bash_prompt" ]; then
+  source "$HOME/.bash_prompt"
 fi
 
-if [ -f .gitcompletion.bash ]; then
-  source .gitcompletion.bash
+if [ -f "$HOME/.gitcompletion.bash" ]; then
+  source "$HOME/.gitcompletion.bash"
 fi
 
-if [ -f .kubecompletion.bash ]; then
-  source .kubecompletion.bash
+if [ -f "$HOME/.kubecompletion.bash" ]; then
+  source "$HOME/.kubecompletion.bash"
 fi
 
-if [ -f /usr/local/bin/aws_completer ]; then
+if [ -f "/usr/local/bin/aws_completer" ]; then
   complete -C '/usr/local/bin/aws_completer' aws
 fi
 
-if [ -f /usr/bin/kubectl ]; then
+if [ -f "/usr/bin/kubectl" ]; then
   kubectl completion bash | bash
 fi
 
 # Node.js version manager
-if [ -d .nvm ]; then
+if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
@@ -35,7 +35,7 @@ if [ -d .nvm ]; then
 fi
 
 # Python version manager
-if [ -d .pyenv ]; then
+if [ -d "$HOME/.pyenv" ]; then
   eval "$(pyenv init -)"
 fi
 

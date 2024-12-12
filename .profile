@@ -29,10 +29,10 @@ if [ -f "$HOME/.cargo/env" ]; then
   source "$HOME/.cargo/env"
 fi
 
-if [ -f .env ]; then
-  source .env
+if [ -f "$HOME/.env" ]; then
+  source "$HOME/.env"
 fi
 
-if [ -e "${HOME}/.iterm2_shell_integration.bash" ]; then
-  source "${HOME}/.iterm2_shell_integration.bash"
+if [ -e "$HOME/.iterm2_shell_integration.bash" ]; then
+  source "$HOME/.iterm2_shell_integration.bash"
 fi
