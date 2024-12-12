@@ -23,7 +23,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "bashBeautify.tabSize": 2,
   "breadcrumbs.enabled": true,
   "debug.toolBarLocation": "docked",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -61,8 +60,6 @@
   "github.copilot.editor.enableAutoCompletions": true,
   "javascript.suggest.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "jest.enableCodeLens": false,
-  "jest.enableSnapshotUpdateMessages": false,
   "keyboard.dispatch": "keyCode",
   "prettier.jsxSingleQuote": true,
   "prettier.printWidth": 80,
@@ -74,7 +71,6 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.rendererType": "dom",
   "typescript.suggest.enabled": false,
   "window.titleBarStyle": "custom",
   "workbench.editor.labelFormat": "short",
